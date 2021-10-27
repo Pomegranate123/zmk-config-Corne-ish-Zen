@@ -18,10 +18,22 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+        };
+        dot_col: dot_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_COLON";
+            bindings = <&kp DOT> <&kp COLON>
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        cma_smc: comma_semicolon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_SEMICOLON";
+            bindings = <&kp COMMA> <&kp SEMICOLON>
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -29,12 +41,12 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            label = "DEFAULT";
+            label = "DEF";
             bindings = <
 &none     &kp X      &kp F      &kp O      &kp U      &kp MINUS     &kp Q     &kp P      &kp L      &kp B      &kp Z      &none
 &none     &hm LGUI W &hm LALT H &hm LCTL A &hm LSFT I &kp Y         &kp G     &hm RSFT T &hm RCTL R &hm RALT S &hm RGUI M &none
-&none     &kp J      &kp K      &kp COMMA  &kp DOT    &kp QUOT      &kp LBKT  &kp D      &kp N      &kp C      &kp V      &none
-                                &kp TAB    &lt NAV E  &kp BSPC      &kp RET   &kp SPACE  &kp ESC
+&none     &kp J      &kp K      &cma_smc   &dot_col   &kp QUOT      &kp LPAR  &kp D      &kp N      &kp C      &kp V      &none
+                                &kp TAB    &lt NAV E  &kp BSPC      &lt SYM RET &lt NUM SPACE &lt FUN ESC
             >;
         };
 
@@ -45,6 +57,36 @@
 &none     &kp LGUI   &kp LALT   &kp LCTL   &kp LSFT   &kp RET       &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none      &none
 &none     &none      &none      &none      &none      &kp LA(LS(C)) &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none      &none
                                 &none      &none      &none         &trans    &trans     &trans
+            >;
+        };
+
+        num_layer {
+            label = "NUM";
+            bindings = <
+&none     &kp GT     &kp N6     &kp N5     &kp N4     &kp LT        &none     &none      &none      &none      &none      &none
+&none     &kp RBRC   &kp N3     &kp N2     &kp N1     &kp LBRC      &kp EQUAL &kp RSFT   &kp RCTL   &kp RALT   &kp RGUI   &none
+&none     &kp RBKT   &kp N9     &kp N8     &kp N7     &kp LBKT      &none     &none      &none      &none      &none      &none
+                                &kp FSLH   &kp N0     &kp BSPC      &trans    &trans     &trans
+            >;
+        };
+
+        sym_layer {
+            label = "SYM";
+            bindings = <
+&none     &kp TILDE  &kp BSLH   &none      &none      &kp CARET     &none     &none      &none      &none      &none      &none
+&none     &kp AT     &kp ASTRK  &kp AMPS   &kp HASH   &kp FSLH      &none     &kp RSFT   &kp RCTL   &kp RALT   &kp RGUI   &none
+&none     &kp PRCNT  &kp QMARK  &kp PLUS   &kp EXCL   &kp GRAVE     &none     &none      &none      &none      &none      &none
+                                &kp PIPE   &kp DLLR   &kp BSPC      &trans    &trans     &trans
+            >;
+        };
+
+        fun_layer {
+            label = "fun";
+            bindings = <
+&none     &none      &kp F6     &kp F5     &kp F4     &none         &none     &kp F14    &kp F15    &kp F16    &none      &none
+&none     &none      &kp F3     &kp F2     &kp F1     &none         &none     &kp F11    &kp F12    &kp F13    &none      &none
+&none     &none      &kp F9     &kp F8     &kp F7     &none         &none     &kp F17    &kp F18    &kp F19    &none      &none
+                                &none      &kp F10    &none         &trans    &trans     &trans
             >;
         };
     };
