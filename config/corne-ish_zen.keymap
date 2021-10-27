@@ -13,27 +13,39 @@
 #define NAV    1
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
 
-                default_layer {
-                        label = "DEFAULT";
-                        bindings = <
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            label = "DEFAULT";
+            bindings = <
 &none     &kp X      &kp F      &kp O      &kp U      &kp MINUS     &kp Q     &kp P      &kp L      &kp B      &kp Z      &none
-&none     &mt LGUI W &mt LALT H &mt LCTL A &mt LSFT I &kp Y         &kp G     &mt RSFT T &mt RCTL R &mt RALT S &mt RGUI M &none
+&none     &hm LGUI W &hm LALT H &hm LCTL A &hm LSFT I &kp Y         &kp G     &hm RSFT T &hm RCTL R &hm RALT S &hm RGUI M &none
 &none     &kp J      &kp K      &kp COMMA  &kp DOT    &kp QUOT      &kp LBKT  &kp D      &kp N      &kp C      &kp V      &none
                                 &kp TAB    &lt NAV E  &kp BSPC      &kp RET   &kp SPACE  &kp ESC
-                        >;
-                };
+            >;
+        };
 
-                nav_layer {
-                        label = "NAV";
-                        bindings = <
+        nav_layer {
+            label = "NAV";
+            bindings = <
 &none     &none      &kp LC(A)  &kp LC(C)  &kp LC(P)  &kp DEL       &none     &none      &none      &none      &none      &none
 &none     &kp LGUI   &kp LALT   &kp LCTL   &kp LSFT   &kp RET       &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none      &none
 &none     &none      &none      &none      &none      &kp LA(LS(C)) &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none      &none
                                 &none      &none      &none         &trans    &trans     &trans
-                        >;
-                };
+            >;
         };
+    };
 };
