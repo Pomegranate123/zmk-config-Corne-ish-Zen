@@ -12,10 +12,25 @@
 #define DEF 0
 #define NAV 1
 #define NUM 2
-#define SYM 3
-#define FUN 4
+#define FUN 3
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_lpar {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            bindings = <&kp LPAR>;
+            layers = <0>;
+        };
+        combo_rpar {
+            timeout-ms = <50>;
+            key-positions = <19 20>;
+            bindings = <&kp RPAR>;
+            layers = <0>;
+        };
+    };
+    
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -58,7 +73,7 @@
         nav_layer {
             label = "NAV";
             bindings = <
-&none     &none      &kp LC(A)  &kp LC(C)  &kp LC(P)  &kp DEL       &none     &none      &none      &none      &none      &none
+&none     &none      &kp LC(A)  &kp LC(C)  &kp LC(V)  &kp DEL       &none     &none      &none      &none      &none      &none
 &none     &kp LGUI   &kp LALT   &kp LCTL   &kp LSFT   &kp RET       &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none      &none
 &none     &none      &none      &none      &none      &kp LA(LS(C)) &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none      &none
                                 &none      &none      &none         &trans    &trans     &trans
@@ -75,15 +90,15 @@
             >;
         };
 
-        sym_layer {
-            label = "SYM";
-            bindings = <
-&none     &kp TILDE  &kp BSLH   &none      &none      &kp CARET     &none     &none      &none      &none      &none      &none
-&none     &kp AT     &kp ASTRK  &kp AMPS   &kp HASH   &kp FSLH      &none     &kp RSFT   &kp RCTL   &kp RALT   &kp RGUI   &none
-&none     &kp PRCNT  &kp QMARK  &kp PLUS   &kp EXCL   &kp GRAVE     &none     &none      &none      &none      &none      &none
-                                &kp PIPE   &kp DLLR   &kp BSPC      &trans    &trans     &trans
-            >;
-        };
+/*        sym_layer {
+*            label = "SYM";
+*            bindings = <
+*&none     &kp TILDE  &kp BSLH   &none      &none      &kp CARET     &none     &none      &none      &none      &none      &none
+*&none     &kp AT     &kp ASTRK  &kp AMPS   &kp HASH   &kp FSLH      &none     &kp RSFT   &kp RCTL   &kp RALT   &kp RGUI   &none
+*&none     &kp PRCNT  &kp QMARK  &kp PLUS   &kp EXCL   &kp GRAVE     &none     &none      &none      &none      &none      &none
+*                                &kp PIPE   &kp DLLR   &kp BSPC      &trans    &trans     &trans
+*            >;
+*/        };
 
         fun_layer {
             label = "fun";
