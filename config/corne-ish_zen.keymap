@@ -23,10 +23,10 @@
             bindings = <&kp TILDE>;
             layers = <0>;
         };
-        combo_bslh {
+        combo_minus {
             timeout-ms = <50>;
             key-positions = <2 3>;
-            bindings = <&kp BSLH>;
+            bindings = <&kp MINUS>;
             layers = <0>;
         };
         combo_lbkt {
@@ -35,16 +35,28 @@
             bindings = <&kp LBKT>;
             layers = <0>;
         };
+        combo_bslh {
+            timeout-ms = <50>;
+            key-positions = <4 5>;
+            bindings = <&kp BSLH>;
+            layers = <0>;
+        };
+        combo_fslh {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&kp FSLH>;
+            layers = <0>;
+        };
         combo_rbkt {
             timeout-ms = <50>;
             key-positions = <7 8>;
             bindings = <&kp RBKT>;
             layers = <0>;
         };
-        combo_fslh {
+        combo_underscore {
             timeout-ms = <50>;
             key-positions = <8 9>;
-            bindings = <&kp FSLH>;
+            bindings = <&kp UNDER>;
             layers = <0>;
         };
         combo_caret {
@@ -53,16 +65,16 @@
             bindings = <&kp CARET>;
             layers = <0>;
         };
-        combo_percent {
+        combo_lessthan {
             timeout-ms = <50>;
             key-positions = <13 14>;
-            bindings = <&kp PRCNT>;
+            bindings = <&kp LT>;
             layers = <0>;
         };
-        combo_tab {
+        combo_equal {
             timeout-ms = <50>;
             key-positions = <14 15>;
-            bindings = <&kp TAB>;
+            bindings = <&kp EQUAL>;
             layers = <0>;
         };
         combo_lpar {
@@ -71,28 +83,46 @@
             bindings = <&kp LPAR>;
             layers = <0>;
         };
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp TAB>;
+            layers = <0>;
+        };
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&kp ESC>;
+            layers = <0>;
+        };
         combo_rpar {
             timeout-ms = <50>;
             key-positions = <19 20>;
             bindings = <&kp RPAR>;
             layers = <0>;
         };
-        combo_esc {
+        combo_amps {
             timeout-ms = <50>;
             key-positions = <20 21>;
-            bindings = <&kp ESC>;
+            bindings = <&kp AMPS>;
+            layers = <0>;
+        };
+        combo_greaterthan {
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            bindings = <&kp GT>;
             layers = <0>;
         };
         combo_at {
             timeout-ms = <50>;
-            key-positions = <21 22>;
+            key-positions = <25 26>;
             bindings = <&kp AT>;
             layers = <0>;
         };
-        combo_amps {
+        combo_plus {
             timeout-ms = <50>;
             key-positions = <26 27>;
-            bindings = <&kp AMPS>;
+            bindings = <&kp PLUS>;
             layers = <0>;
         };
         combo_lbrc {
@@ -101,55 +131,31 @@
             bindings = <&kp LBRC>;
             layers = <0>;
         };
+        combo_dllr {
+            timeout-ms = <50>;
+            key-positions = <28 29>;
+            bindings = <&kp DLLR>;
+            layers = <0>;
+        };
+        combo_pipe {
+            timeout-ms = <50>;
+            key-positions = <30 31>;
+            bindings = <&kp PIPE>;
+            layers = <0>;
+        };
         combo_rbrc {
             timeout-ms = <50>;
             key-positions = <31 32>;
             bindings = <&kp RBRC>;
             layers = <0>;
         };
-        combo_pipe {
-            timeout-ms = <50>;
-            key-positions = <32 33>;
-            bindings = <&kp PIPE>;
-            layers = <0>;
-        };
-
-        combo_plus {
-            timeout-ms = <50>;
-            key-positions = <2 14>;
-            bindings = <&kp PLUS>;
-            layers = <0>;
-        };
         combo_astrk {
             timeout-ms = <50>;
-            key-positions = <3 15>;
+            key-positions = <32 33>;
             bindings = <&kp ASTRK>;
             layers = <0>;
         };
-        combo_underscore {
-            timeout-ms = <50>;
-            key-positions = <5 17>;
-            bindings = <&kp UNDER>;
-            layers = <0>;
-        };
-        combo_hash {
-            timeout-ms = <50>;
-            key-positions = <7 19>;
-            bindings = <&kp HASH>;
-            layers = <0>;
-        };
-        combo_dllr {
-            timeout-ms = <50>;
-            key-positions = <8 20>;
-            bindings = <&kp DLLR>;
-            layers = <0>;
-        };
-        combo_grave {
-            timeout-ms = <50>;
-            key-positions = <9 21>;
-            bindings = <&kp GRAVE>;
-            layers = <0>;
-        };
+
         combo_qmark {
             timeout-ms = <50>;
             key-positions = <14 26>;
@@ -168,22 +174,16 @@
             bindings = <&kp COLON>;
             layers = <0>;
         };
-        combo_dqt {
-            timeout-ms = <50>;
-            key-positions = <17 29>;
-            bindings = <&kp DQT>;
-            layers = <0>;
-        };
-        combo_equal {
+        combo_hash {
             timeout-ms = <50>;
             key-positions = <19 31>;
-            bindings = <&kp EQUAL>;
+            bindings = <&kp HASH>;
             layers = <0>;
         };
-        combo_ret {
+        combo_prcnt {
             timeout-ms = <50>;
             key-positions = <20 32>;
-            bindings = <&kp RET>;
+            bindings = <&kp PRCNT>;
             layers = <0>;
         };
         combo_excl {
@@ -215,7 +215,7 @@
 &none     &kp X      &kp F      &kp O      &kp U      &kp MINUS     &kp Q     &kp P      &kp L      &kp B      &kp Z      &none
 &none     &hm LGUI W &hm LALT H &hm LCTL A &hm LSFT I &kp Y         &kp G     &hm RSFT T &hm RCTL R &hm RALT S &hm RGUI M &none
 &none     &kp J      &kp K      &kp COMMA  &kp DOT    &kp QUOT      &none     &kp D      &kp N      &kp C      &kp V      &none
-                                &none      &lt NAV E  &kp BSPC      &kp ENT     &lt NUM SPACE &mo FUN
+                                &none      &lt NAV E  &kp BSPC      &kp RET   &lt NUM SPACE &mo FUN
             >;
         };
 
