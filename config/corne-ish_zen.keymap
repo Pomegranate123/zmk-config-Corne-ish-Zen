@@ -156,16 +156,16 @@
             bindings = <&kp QMARK>;
             layers = <0>;
         };
-        combo_colon {
-            timeout-ms = <50>;
-            key-positions = <15 27>;
-            bindings = <&kp COLON>;
-            layers = <0>;
-        };
         combo_semi {
             timeout-ms = <50>;
-            key-positions = <16 28>;
+            key-positions = <15 27>;
             bindings = <&kp SEMI>;
+            layers = <0>;
+        };
+        combo_colon {
+            timeout-ms = <50>;
+            key-positions = <16 28>;
+            bindings = <&kp COLON>;
             layers = <0>;
         };
         combo_dqt {
@@ -214,8 +214,8 @@
             bindings = <
 &none     &kp X      &kp F      &kp O      &kp U      &kp MINUS     &kp Q     &kp P      &kp L      &kp B      &kp Z      &none
 &none     &hm LGUI W &hm LALT H &hm LCTL A &hm LSFT I &kp Y         &kp G     &hm RSFT T &hm RCTL R &hm RALT S &hm RGUI M &none
-&none     &kp J      &kp K      &kp COMMA  &kp DOT    &kp QUOT      &kp LPAR  &kp D      &kp N      &kp C      &kp V      &none
-                                &kp TAB    &lt NAV E  &kp BSPC      &kp RET   &lt NUM SPACE &lt FUN ESC
+&none     &kp J      &kp K      &kp COMMA  &kp DOT    &kp QUOT      &none     &kp D      &kp N      &kp C      &kp V      &none
+                                &none      &lt NAV E  &kp BSPC      &kp ENT     &lt NUM SPACE &mo FUN
             >;
         };
 
@@ -232,23 +232,13 @@
         num_layer {
             label = "NUM";
             bindings = <
-&none     &kp GT     &kp N6     &kp N5     &kp N4     &kp LT        &none     &none      &none      &none      &none      &none
-&none     &kp RBRC   &kp N3     &kp N2     &kp N1     &kp LBRC      &kp EQUAL &kp RSFT   &kp RCTL   &kp RALT   &kp RGUI   &none
-&none     &kp RBKT   &kp N9     &kp N8     &kp N7     &kp LBKT      &none     &none      &none      &none      &none      &none
-                                &kp FSLH   &kp N0     &kp BSPC      &trans    &trans     &trans
+&none     &none      &kp N6     &kp N5     &kp N4     &none         &none     &none      &none      &none      &none      &none
+&none     &none      &kp N3     &kp N2     &kp N1     &none         &none     &kp RSFT   &kp RCTL   &kp RALT   &kp RGUI   &none
+&none     &none      &kp N9     &kp N8     &kp N7     &none         &none     &none      &none      &none      &none      &none
+                                &none      &kp N0     &kp BSPC      &trans    &trans     &trans
             >;
         };
 
-/*        sym_layer {
-*            label = "SYM";
-*            bindings = <
-*&none     &kp TILDE  &kp BSLH   &none      &none      &kp CARET     &none     &none      &none      &none      &none      &none
-*&none     &kp AT     &kp ASTRK  &kp AMPS   &kp HASH   &kp FSLH      &none     &kp RSFT   &kp RCTL   &kp RALT   &kp RGUI   &none
-*&none     &kp PRCNT  &kp QMARK  &kp PLUS   &kp EXCL   &kp GRAVE     &none     &none      &none      &none      &none      &none
-*                                &kp PIPE   &kp DLLR   &kp BSPC      &trans    &trans     &trans
-*            >;
-*        };
-*/
         fun_layer {
             label = "fun";
             bindings = <
