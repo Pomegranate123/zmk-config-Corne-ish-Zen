@@ -219,7 +219,7 @@
             bindings = <
 &kp X      &kp F      &kp O      &kp U      &kp MINUS    &kp Q      &kp P         &kp L       &kp B      &kp Z
 &hm LGUI W &hm LALT H &hm LCTL A &hm LSFT I &kp Y        &kp G      &hm RSFT T    &hm RCTL R  &hm RALT S &hm RGUI M
-&kp J      &kp K      &sp sOMMA  &kp DOT    &none        &none      &kp D         &kp N       &kp C      &kp V
+&kp J      &kp K      &kp COMMA  &kp DOT    &none        &none      &kp D         &kp N       &kp C      &kp V
                       &kp TAB    &lt NAV E  &kp BSPC     &lt BT RET &lt NUM SPACE &lt FUN ESC
             >;
         };
