@@ -16,6 +16,10 @@
 #define BT  4
 
 / {
+    chosen {
+      zmk,matrix_transform = &five_column_transform;
+    };
+
     combos {
         compatible = "zmk,combos";
         combo_tilde {
@@ -213,50 +217,50 @@
         default_layer {
             label = "DEF";
             bindings = <
-&none     &kp X      &kp F      &kp O      &kp U      &kp MINUS     &kp Q     &kp P      &kp L      &kp B      &kp Z      &none
-&none     &hm LGUI W &hm LALT H &hm LCTL A &hm LSFT I &kp Y         &kp G     &hm RSFT T &hm RCTL R &hm RALT S &hm RGUI M &none
-&none     &kp J      &kp K      &kp COMMA  &kp DOT    &none         &none     &kp D      &kp N      &kp C      &kp V      &none
-                                &kp TAB    &lt NAV E  &kp BSPC      &lt BT RET &lt NUM SPACE &lt FUN ESC
+&kp X      &kp F      &kp O      &kp U      &kp MINUS    &kp Q      &kp P         &kp L       &kp B      &kp Z
+&hm LGUI W &hm LALT H &hm LCTL A &hm LSFT I &kp Y        &kp G      &hm RSFT T    &hm RCTL R  &hm RALT S &hm RGUI M
+&kp J      &kp K      &kp COMMA  &kp DOT    &none        &none      &kp D         &kp N       &kp C      &kp V
+                      &kp TAB    &lt NAV E  &kp BSPC     &lt BT RET &lt NUM SPACE &lt FUN ESC
             >;
         };
 
         nav_layer {
             label = "NAV";
             bindings = <
-&none     &none      &kp LC(A)  &kp LC(C)  &kp LC(V)  &kp DEL       &none     &none      &none      &none      &none      &none
-&none     &kp LGUI   &kp LALT   &kp LCTL   &kp LSFT   &kp RET       &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none      &none
-&none     &none      &none      &none      &none      &kp LA(LS(C)) &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none      &none
-                                &none      &none      &none         &trans    &trans     &trans
+&none    &kp LC(A) &kp LC(C) &kp LC(V) &kp DEL          &none    &none     &none     &none     &none
+&kp LGUI &kp LALT  &kp LCTL  &kp LSFT  &kp RET          &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none
+&none    &none     &none     &none     &kp LA(LS(C))    &kp HOME &kp PG_DN &kp PG_UP &kp END   &none
+                   &none     &none     &none            &none   &none    &none
             >;
         };
 
         num_layer {
             label = "NUM";
             bindings = <
-&none     &none      &kp N6     &kp N5     &kp N4     &none         &none     &none      &none      &none      &none      &none
-&none     &none      &kp N3     &kp N2     &kp N1     &none         &none     &kp RSFT   &kp RCTL   &kp RALT   &kp RGUI   &none
-&none     &none      &kp N9     &kp N8     &kp N7     &none         &none     &none      &none      &none      &none      &none
-                                &none      &kp N0     &kp BSPC      &trans    &trans     &trans
+&none &kp N6 &kp N5 &kp N4 &none    &none &none    &none    &none    &none
+&none &kp N3 &kp N2 &kp N1 &none    &none &kp RSFT &kp RCTL &kp RALT &kp RGUI
+&none &kp N9 &kp N8 &kp N7 &none    &none &none    &none    &none    &none
+             &none  &kp N0 &kp BSPC &none &none    &none
             >;
         };
 
         fun_layer {
             label = "FUN";
             bindings = <
-&none     &none      &kp F6     &kp F5     &kp F4     &none         &none     &kp F14    &kp F15    &kp F16    &none      &none
-&none     &none      &kp F3     &kp F2     &kp F1     &none         &none     &kp F11    &kp F12    &kp F13    &none      &none
-&none     &none      &kp F9     &kp F8     &kp F7     &none         &none     &kp F17    &kp F18    &kp F19    &none      &none
-                                &none      &kp F10    &none         &trans    &trans     &trans
+&none &kp F6 &kp F5 &kp F4  &none    &none &kp F14 &kp F15 &kp F16 &none
+&none &kp F3 &kp F2 &kp F1  &none    &none &kp F11 &kp F12 &kp F13 &none
+&none &kp F9 &kp F8 &kp F7  &none    &none &kp F17 &kp F18 &kp F19 &none
+             &none  &kp F10 &none    &none &none   &none
             >;
         };
 
         bt_layer {
             label = "BT";
             bindings = <
-&none     &none      &none      &bt BT_SEL 4 &bt BT_SEL 3 &none     &none     &none      &none      &none      &none      &none
-&none     &bt BT_CLR &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &none   &none     &none      &none      &none      &none      &none
-&none     &none      &none      &bt BT_PRV &bt BT_NXT &none         &none     &none      &none      &none      &none      &none
-                                &none      &none      &none         &trans    &trans     &trans
+&none      &none        &bt BT_SEL 4 &bt BT_SEL 3 &none     &none &none &none &none &none
+&bt BT_CLR &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &none     &none &none &none &none &none
+&none      &none        &bt BT_PRV   &bt BT_NXT   &none     &none &none &none &none &none
+                        &none        &none        &none     &none &none &none
             >;
         };
     };
