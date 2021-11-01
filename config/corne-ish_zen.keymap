@@ -46,6 +46,12 @@
             bindings = <&kp PLUS>;
             layers = <0>;
         };
+        combo_at1 {
+            timeout-ms = <50>;
+            key-positions = <5 6>;
+            bindings = <&kp AT>;
+            layers = <0>;
+        };
         combo_rbkt {
             timeout-ms = <50>;
             key-positions = <6 7>;
@@ -112,7 +118,7 @@
             bindings = <&kp GT>;
             layers = <0>;
         };
-        combo_at {
+        combo_at2 {
             timeout-ms = <50>;
             key-positions = <20 21>;
             bindings = <&kp AT>;
