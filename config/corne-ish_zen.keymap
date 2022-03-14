@@ -237,7 +237,7 @@
             bindings = <
 &none    &kp LC(A) &kp LC(C) &kp LC(V) &kp DEL          &none    &none     &none     &none     &none
 &kp LGUI &kp LALT  &kp LCTL  &kp LSFT  &kp RET          &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none
-&none    &none     &none     &none     &kp LA(LS(C))    &kp HOME &kp PG_DN &kp PG_UP &kp END   &none
+&none    &none     &none     &none     &kp LS(LA(C))    &kp HOME &kp PG_DN &kp PG_UP &kp END   &none
                    &none     &none     &none            &none   &none    &none
             >;
         };
