@@ -226,7 +226,7 @@
             label = "DEF";
             bindings = <
 &kp X      &kp F      &kp O      &kp U      &kp MINUS    &kp Q      &kp P         &kp L       &kp B      &kp Z
-&hm LGUI W &hm LALT H &hm LCTL A &hm LSFT I &kp Y        &kp G      &hm RSFT T    &hm RCTL R  &hm RALT S &hm RGUI M
+&hm LALT W &hm LGUI H &hm LCTL A &hm LSFT I &kp Y        &kp G      &hm RSFT T    &hm RCTL R  &hm RGUI S &hm RALT M
 &kp J      &kp K      &kp COMMA  &kp DOT    &none        &none      &kp D         &kp N       &kp C      &kp V
                       &kp TAB    &lt NAV E  &kp BSPC     &lt BT RET &lt NUM SPACE &lt FUN ESC
             >;
@@ -236,8 +236,8 @@
             label = "NAV";
             bindings = <
 &none    &kp LC(A) &kp LC(C) &kp LC(V) &kp DEL          &none    &none     &none     &none     &none
-&kp LGUI &kp LALT  &kp LCTL  &kp LSFT  &kp RET          &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none
-&none    &none     &none     &none     &kp LS(LA(C))    &kp HOME &kp PG_DN &kp PG_UP &kp END   &none
+&kp LALT &kp LGUI  &kp LCTL  &kp LSFT  &kp RET          &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none
+&none    &none     &none     &none     &kp LS(LG(C))    &kp HOME &kp PG_DN &kp PG_UP &kp END   &none
                    &none     &none     &none            &none   &none    &none
             >;
         };
@@ -246,7 +246,7 @@
             label = "NUM";
             bindings = <
 &none &kp N6 &kp N5 &kp N4 &none    &none &none    &none    &none    &none
-&none &kp N3 &kp N2 &kp N1 &none    &none &kp RSFT &kp RCTL &kp RALT &kp RGUI
+&none &kp N3 &kp N2 &kp N1 &none    &none &kp RSFT &kp RCTL &kp RGUI &kp RALT
 &none &kp N9 &kp N8 &kp N7 &none    &none &none    &none    &none    &none
              &none  &kp N0 &kp BSPC &none &none    &none
             >;
